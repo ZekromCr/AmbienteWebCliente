@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8">
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="css/estilos.css">
+<link href="https://file.myfontastic.com/Vxw4A73sBxQfJ7eAVvwpuf/icons.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/base64.js"></script>
+
+<script type="text/javascript">
+<!--
+
+function buildData(){
+var txtData = "Correo: "+$("#Correo").val()+"    "+"\r\nNombre: "+$("#Nombre").val()+"    "+
+            "\r\nMensaje: "+$("#Mensaje").val();
+
+    return txtData;
+}
+
+$(function(){
+    
+    $("#formToSave").submit(function(event){
+        event.preventDefault();
+        var txtData = buildData();
+        window.location.href="data:application/octet-stream;base64,"+Base64.encode(txtData);
+    });
+
+    
+});
+//-->
+</script>
+</head>
+<body>
+<header class="header">
+        <div class="contenedor">
+            <h1 class="logo">V Solutions</h1>
+            <span class="icon-menu" id="btn-menu"></span>
+            <nav class="nav" id="nav">
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Inicio</a></li>
+                    <li class="menu__item"><a class="menu__link" href="servicios.html">Servicios</a></li>
+                    <li class="menu__item"><a class="menu__link" href="blog.html">Blog</a></li>
+                    <li class="menu__item"><a class="menu__link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> 
+    <div class="banner">
+        <img src="img/banner2.jpg" alt="" class="banner__img">
+        <div class="contenedor">
+            <h2 class="banner__titulo">Soluciones Electronicas</h2>
+            <p class="banner__txt">Tu mejor Elección</p>
+        </div>
+    </div> 
+           <div class="contenedor">
+            <section class="info">
+                <article class="info__columna">
+<form method="post" action="" id="formToSave">
+    <dl>
+        <dt>Correo:</dt>
+        <dd><input type="text" id="Correo" value="Escriba su correo aquí." /></dd>
+        <dt>Nombre:</dt>
+        <dd><input type="text" id="Nombre" value="Escriba su nombre aquí."></dd>
+        <dt>Mensaje:</dt>
+        <dd><textarea id="Mensaje" cols="30" rows="10"> Escribe tu mensaje aquí.</textarea></dd>
+        
+    </dl>
+    
+    <p><button type="submit" class="boton">Enviar Correo</button></p>
+</form>
+</article>
+              <article class="info__columna">
+                    <h2 class="info__titulo">Consultas</h2>
+                    <p class="info__txt">Por este medio nos puede hacer saber sus dudas en cuanto a nuestros servícios y disponibilidad de nuestros trabajadores.</p>
+                </article>
+                <article class="info__columna">
+                    <h2 class="info__titulo">Cotizaciones</h2>
+                    <p class="info__txt"> Por este medio puede solicitar cotizaciones del equipo, software o servicio que desee.</p>
+                </article>
+               </section>
+    </div>
+    <footer class="footer">
+        <div class="social">
+            <a href="www.facebook.com" class="icon-facebook"></a>
+            <a href="www.twitter.com" class="icon-twitter"></a>
+            <a href="www.google.com" class="icon-google"></a>
+            <a href="www.instagram.com" class="icon-instagram"></a>
+        </div>
+        <p class="copy">&copy;V Solutions 2016 - Todos los derechos reservados.</p>
+    </footer>
+     <script src="js/menu.js"></script> 
+</body>
+</html>
